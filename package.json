@@ -2,8 +2,6 @@
   "name": "nodejs-expressjs-mongodb-base-project",
   "private": true,
   "version": "1.0.0",
-  "author": "TrungQuanDev - Một Lập Trình Viên",
-  "description": "https://youtube.com/@trungquandev",
   "engines": {
     "node": ">=18.x"
   },
@@ -17,6 +15,9 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.22.10",
+    "async-exit-hook": "^2.0.1",
+    "dotenv": "^17.4.2",
+    "exit-hook": "^5.0.1",
     "express": "^4.18.2",
     "mongodb": "^6.7.0"
   },
