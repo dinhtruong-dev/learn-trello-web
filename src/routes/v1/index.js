@@ -1,6 +1,6 @@
 import express from 'express'
 import { StatusCodes } from 'http-status-codes'
-import broadRoutes from '~/routes/v1/broadRoutes'
+import broadRoute from '~/routes/v1/boardRoute'
 
 const Router = express.Router()
 
@@ -12,6 +12,6 @@ Router.get('/status', (req, res) => {
 })
 
 /** Broad APIs */
-Router.use('/broads', broadRoutes)
+Router.use('/boards', broadRoute)
 
 export default Router

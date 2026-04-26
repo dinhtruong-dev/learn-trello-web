@@ -8,6 +8,9 @@ import APIs_V1 from '~/routes/v1'
 const START_SERVER = () => {
   const app = express()
 
+  // Enable req.body from data
+  app.use(express.json())
+
   app.use('/v1', APIs_V1)
   app.listen(env.APP_PORT, env.APP_HOST, () => {
     console.log(`3. Hello ${env.AUTHOR}, I am running at ${env.APP_HOST} and Port:${env.APP_PORT}`)
@@ -30,11 +33,3 @@ const START_SERVER = () => {
     process.exit(0)
   }
 })()
-
-// CONNECT_DB()
-//   .then(() => {console.log('Connect to MongoDB Cloud Atlas')})
-//   .then(() => START_SERVER())
-//   .catch(error => {
-//     console.error(error)
-//     process.exit(0)
-//   })
